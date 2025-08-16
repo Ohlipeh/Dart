@@ -128,6 +128,11 @@ String gerarTelefone() {
   return "${random.nextInt(90000) + 10000}-${random.nextInt(9000) + 1000}";
 }
 
+// Gerar id veterinario aleatório
+int gerarIdVeterinario() {
+  return random.nextInt(veterinarios.length) + 1; // IDs começam em 1
+}
+
 // Gera uma data aleatória nos últimos "anosAtras" anos
 String gerarDataAleatoria({int anosAtras = 3}) {
   final hoje = DateTime.now();
@@ -235,7 +240,7 @@ Future<void> main() async {
         "vet_resp": veterinarios[random.nextInt(veterinarios.length)],
         "descricao": descricoes[random.nextInt(descricoes.length)],
         "id_animal": animalId,
-        "id_veterinario": 1, // Aqui estou fixando para um veterinário ID 1
+        "id_veterinario": gerarIdVeterinario(), // Aqui estou fixando para um veterinário ID 1
       },
     );
 
