@@ -240,7 +240,8 @@ Future<void> main() async {
         "vet_resp": veterinarios[random.nextInt(veterinarios.length)],
         "descricao": descricoes[random.nextInt(descricoes.length)],
         "id_animal": animalId,
-        "id_veterinario": gerarIdVeterinario(), // Aqui estou fixando para um veterinário ID 1
+        "id_veterinario":
+            gerarIdVeterinario(), // Aqui estou fixando para um veterinário ID 1
       },
     );
 

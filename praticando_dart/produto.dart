@@ -34,13 +34,18 @@ class Produto {
 void main() {
   // Função para criar um objeto da classe Produto
   Produto meuProduto = Produto("Notebook", 2500.00, 5);
+  Produto outroProduto = Produto("Smartphone", 1500.00, 10);
 
   // Exibindo as informações do produto
   meuProduto.exibirInfo();
+  outroProduto.exibirInfo();
 
   // Testando o setter de preço
   meuProduto.preco = 10000.00;
+  outroProduto.preco = -500.00; // Tentativa de definir um preço negativo
 
   // Usanddo o getter para obter o preço atualizado
   print("Preço atualizado: \$${meuProduto.preco}");
+  print("Preço atualizado: \$${outroProduto.preco}");
+  print("--------------------------------------------------\n");
 }
